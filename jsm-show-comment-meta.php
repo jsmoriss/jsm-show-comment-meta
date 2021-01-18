@@ -177,9 +177,9 @@ if ( ! class_exists( 'JSM_Show_Comment_Metadata' ) ) {
 
 			foreach( $comment_meta_filtered as $meta_key => $arr ) {
 
-				foreach ( $skip_keys_preg_match as $preg_exp ) {
+				foreach ( $skip_keys_preg_match as $preg_expr ) {
 
-					if ( preg_match( $preg_exp, $meta_key ) ) {
+					if ( preg_match( $preg_expr, $meta_key ) ) {
 
 						continue 2;
 					}
