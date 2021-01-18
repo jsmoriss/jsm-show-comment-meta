@@ -13,7 +13,7 @@
  * Requires PHP: 7.0
  * Requires At Least: 4.5
  * Tested Up To: 5.6
- * Version: 1.3.0
+ * Version: 1.0.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -36,7 +36,7 @@ if ( ! class_exists( 'JSM_Show_Comment_Metadata' ) ) {
 
 		private $view_cap;
 
-		private $wp_min_version = '4.4';
+		private $wp_min_version = '4.5';
 
 		private static $instance = null;	// JSM_Show_Comment_Metadata class object.
 

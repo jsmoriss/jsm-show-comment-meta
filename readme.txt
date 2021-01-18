@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 7.0
 Requires At Least: 4.5
 Tested Up To: 5.6
-Stable Tag: 1.3.0
+Stable Tag: 1.0.0
 
 Show all comment meta (aka custom fields) in a metabox on comment editing pages -- a great tool for debugging issues with comment meta.
 
@@ -93,7 +93,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Requires At Least**
 	* PHP v7.0.
-	* WordPress v4.4.
+	* WordPress v4.5.
 
 == Upgrade Notice ==
 
