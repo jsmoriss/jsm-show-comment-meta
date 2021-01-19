@@ -17,11 +17,11 @@ Show all comment meta (aka custom fields) in a metabox on comment editing pages 
 
 == Description ==
 
-Wondering about the comment meta your theme and/or plugins might be creating?
+**Wondering about the comment meta your theme and/or plugins might be creating?**
 
-Want to find the name of a specific comment meta key?
+**Want to find the name of a specific comment meta key?**
 
-Need some help debugging your comment meta (aka custom fields)?
+**Need some help debugging your comment meta (aka custom fields)?**
 
 The JSM's Show Comment Metadata plugin displays all comment meta (aka custom fields) keys and their unserialized values in a metabox at the bottom of comment editing pages.
 
