@@ -10,7 +10,7 @@ Tags: meta, comment meta, inspector, custom fields, debug, tools
 Contributors: jsmoriss
 Requires PHP: 7.0
 Requires At Least: 4.5
-Tested Up To: 5.7
+Tested Up To: 5.7.1
 Stable Tag: 1.0.0
 
 Show all comment meta (aka custom fields) in a metabox on comment editing pages -- a great tool for debugging issues with comment meta.
