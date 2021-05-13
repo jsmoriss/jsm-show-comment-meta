@@ -12,7 +12,7 @@
  * Description: Show all comment meta (aka custom fields) in a metabox on comment editing pages.
  * Requires PHP: 7.0
  * Requires At Least: 4.5
- * Tested Up To: 5.7.1
+ * Tested Up To: 5.7.2
  * Version: 1.0.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
