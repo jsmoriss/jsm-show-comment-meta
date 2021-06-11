@@ -25,7 +25,7 @@ Show all comment meta (aka custom fields) in a metabox on comment editing pages 
 
 The JSM's Show Comment Metadata plugin displays all comment meta (aka custom fields) keys and their unserialized values in a metabox at the bottom of comment editing pages.
 
-There are no plugin settings &mdash; simply *install* and *activate* the plugin.
+There are no plugin settings - simply *install* and *activate* the plugin.
 
 = Related Plugins =
 
