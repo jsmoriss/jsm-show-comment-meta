@@ -13,7 +13,7 @@ Requires At Least: 5.0
 Tested Up To: 5.8.2
 Stable Tag: 1.0.0
 
-Show all comment meta (aka custom fields) in a metabox on comment editing pages -- a great tool for debugging issues with comment meta.
+Show all comment meta (aka custom fields) in a metabox on comment editing pages &mdash; a great tool for debugging issues with comment meta.
 
 == Description ==
 

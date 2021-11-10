@@ -2,7 +2,7 @@
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Show Comment Metadata</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>Show all comment meta (aka custom fields) in a metabox on comment editing pages -- a great tool for debugging issues with comment meta.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>Show all comment meta (aka custom fields) in a metabox on comment editing pages &mdash; a great tool for debugging issues with comment meta.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.0.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.0 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>5.0 or newer</td></tr>
