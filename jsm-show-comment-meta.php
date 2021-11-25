@@ -68,7 +68,7 @@ if ( ! class_exists( 'JsmShowCommentMeta' ) ) {
 				return;
 			}
 
-			$view_cap = apply_filters( 'jsm_scm_view_cap', 'manage_options' );
+			$view_cap = apply_filters( 'jsmscm_view_cap', 'manage_options' );
 
 			if ( ! current_user_can( $view_cap, $comment_obj->comment_ID ) ) {
 
@@ -95,8 +95,8 @@ if ( ! class_exists( 'JsmShowCommentMeta' ) ) {
 			}
 
 			$comment_meta          = get_comment_meta( $comment_obj->comment_ID );
-			$comment_meta_filtered = apply_filters( 'jsm_scm_comment_meta', $comment_meta, $comment_obj );
-			$skip_keys_preg_match  = apply_filters( 'jsm_scm_skip_keys', array() );
+			$comment_meta_filtered = apply_filters( 'jsmscm_comment_meta', $comment_meta, $comment_obj );
+			$skip_keys_preg_match  = apply_filters( 'jsmscm_skip_keys', array() );
 
 			?>
 			<style type="text/css">
