@@ -9,7 +9,7 @@
  * Author URI: https://surniaulula.com/
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
- * Description: Show all comment meta (aka custom fields) in a metabox on comment editing pages.
+ * Description: Show comment metadata in a metabox when editing comments - a great tool for debugging issues with comment metadata.
  * Requires PHP: 7.2
  * Requires At Least: 5.2
  * Tested Up To: 5.8.2

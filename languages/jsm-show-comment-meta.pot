@@ -35,8 +35,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Show all comment meta (aka custom fields) in a metabox on comment editing "
-"pages."
+"Show comment metadata in a metabox when editing comments - a great tool for "
+"debugging issues with comment metadata."
 msgstr ""
 
 #. Author of the plugin/theme
