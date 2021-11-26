@@ -13,7 +13,7 @@ Requires At Least: 5.2
 Tested Up To: 5.8.2
 Stable Tag: 1.0.0
 
-Show all comment meta (aka custom fields) in a metabox on comment editing pages &mdash; a great tool for debugging issues with comment meta.
+Show comment metadata in a metabox when editing comments - a great tool for debugging issues with comment metadata.
 
 == Description ==
 
@@ -30,7 +30,7 @@ There are no plugin settings - simply *install* and *activate* the plugin.
 = Related Plugins =
 
 * [JSM's Show Post Metadata](https://wordpress.org/plugins/jsm-show-post-meta/)
-* [JSM's Show Term Metadata](https://wordpress.org/plugins/jsm-show-term-meta/) (ie. Categories and Tags)
+* [JSM's Show Term Metadata](https://wordpress.org/plugins/jsm-show-term-meta/)
 * [JSM's Show User Metadata](https://wordpress.org/plugins/jsm-show-user-meta/)
 
 == Installation ==
