@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 7.2
 Requires At Least: 5.2
 Tested Up To: 5.8.2
-Stable Tag: 1.0.0
+Stable Tag: 2.0.0
 
 Show comment metadata in a metabox when editing comments - a great tool for debugging issues with comment metadata.
 
@@ -95,27 +95,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* PHP v7.2.
 	* WordPress v5.2.
 
-**Version 1.0.0 (2021/01/18)**
-
-* **New Features**
-	* Initial release.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v7.2.
-	* WordPress v5.2.
-
 == Upgrade Notice ==
 
 = 2.0.0 =
 
 (2021/11/26) Complete rewrite of the plugin - all class, method, and filter names have changed.
-
-= 1.0.0 =
-
-(2021/01/18) Maintenance release.
 
