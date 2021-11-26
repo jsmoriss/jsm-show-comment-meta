@@ -13,15 +13,15 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: jsm-show-comment-meta.php:79
+#: lib/comment.php:42
 msgid "Comment Metadata"
 msgstr ""
 
-#: jsm-show-comment-meta.php:130
+#: lib/comment.php:68
 msgid "Key"
 msgstr ""
 
-#: jsm-show-comment-meta.php:132
+#: lib/comment.php:69
 msgid "Value"
 msgstr ""
 

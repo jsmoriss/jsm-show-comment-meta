@@ -30,20 +30,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-if ( ! class_exists( 'JsmShowCommentMeta' ) ) {
+if ( ! class_exists( 'JsmScm' ) ) {
 
-	class JsmShowCommentMeta {
+	class JsmScm {
 
-		private static $instance = null;	// JsmShowCommentMeta class object.
+		private static $instance = null;	// JsmScm class object.
 
-		private function __construct() {
+		public function __construct() {
 
-			if ( is_admin() ) {
+			if ( ! is_admin() ) return;	// This is an admin-only plugin.
 
-				add_action( 'plugins_loaded', array( $this, 'init_textdomain' ) );
+			$plugin_dir = trailingslashit( dirname( __FILE__ ) );
 
-				add_action( 'add_meta_boxes_comment', array( $this, 'add_meta_boxes_comment' ), 1000, 2 );
-			}
+			require_once $plugin_dir . 'lib/config.php';
+
+			JsmScmConfig::set_constants( __FILE__ );
+
+			JsmScmConfig::require_libs( __FILE__ );
+
+			add_action( 'init', array( $this, 'init_textdomain' ) );
+			add_action( 'init', array( $this, 'init_objects' ) );
 		}
 
 		public static function &get_instance() {
@@ -61,108 +67,11 @@ if ( ! class_exists( 'JsmShowCommentMeta' ) ) {
 			load_plugin_textdomain( 'jsm-show-comment-meta', false, 'jsm-show-comment-meta/languages/' );
 		}
 
-		public function add_meta_boxes_comment( $comment_obj ) {
+		public function init_objects() {
 
-			if ( ! isset( $comment_obj->comment_ID ) ) {	// Just in case.
-
-				return;
-			}
-
-			$view_cap = apply_filters( 'jsmscm_view_cap', 'manage_options' );
-
-			if ( ! current_user_can( $view_cap, $comment_obj->comment_ID ) ) {
-
-				return;
-			}
-
-			$metabox_id      = 'jsmscm';
-			$metabox_title   = __( 'Comment Metadata', 'jsm-show-comment-meta' );
-			$metabox_screen  = null;
-			$metabox_context = 'normal';
-			$metabox_prio    = 'low';
-			$callback_args   = array(	// Second argument passed to the callback function / method.
-				'__block_editor_compatible_meta_box' => true,
-			);
-
-			add_meta_box( $metabox_id, $metabox_title, array( $this, 'show_comment_metadata' ), $metabox_screen, $metabox_context, $metabox_prio, $callback_args );
-		}
-
-		public function show_comment_metadata( $comment_obj ) {
-
-			if ( empty( $comment_obj->comment_ID ) ) {
-
-				return;
-			}
-
-			$comment_meta          = get_comment_meta( $comment_obj->comment_ID );
-			$comment_meta_filtered = apply_filters( 'jsmscm_comment_meta', $comment_meta, $comment_obj );
-			$skip_keys_preg_match  = apply_filters( 'jsmscm_skip_keys', array() );
-
-			?>
-			<style type="text/css">
-				div#jsmscm.postbox table {
-					width:100%;
-					max-width:100%;
-					text-align:left;
-					table-layout:fixed;
-				}
-				div#jsmscm.postbox table .key-column {
-					width:30%;
-				}
-				div#jsmscm.postbox table tr.added-meta {
-					background-color:#eee;
-				}
-				div#jsmscm.postbox table td {
-					padding:10px;
-					vertical-align:top;
-					border:1px dotted #ccc;
-				}
-				div#jsmscm.postbox table td div {
-					overflow-x:auto;
-				}
-				div#jsmscm.postbox table td div pre {
-					margin:0;
-					padding:0;
-				}
-			</style>
-			<?php
-
-			echo '<table><thead><tr><th class="key-column">' . __( 'Key', 'jsm-show-comment-meta' ) . '</th>';
-
-			echo '<th class="value-column">' . __( 'Value', 'jsm-show-comment-meta' ) . '</th></tr></thead><tbody>';
-
-			ksort( $comment_meta_filtered );
-
-			foreach( $comment_meta_filtered as $meta_key => $arr ) {
-
-				foreach ( $skip_keys_preg_match as $preg_expr ) {
-
-					if ( preg_match( $preg_expr, $meta_key ) ) {
-
-						continue 2;
-					}
-				}
-
-				if ( is_array( $arr ) ) {	// Just in case.
-
-					foreach ( $arr as $num => $el ) {
-
-						$arr[ $num ] = maybe_unserialize( $el );
-					}
-				}
-
-				$is_added = isset( $comment_meta[ $meta_key ] ) ? false : true;
-
-				echo $is_added ? '<tr class="added-meta">' : '<tr>';
-
-				echo '<td class="key-column"><div class="key-cell"><pre>' . esc_html( $meta_key ) . '</pre></div></td>';
-
-				echo '<td class="value-column"><div class="value-cell"><pre>' . esc_html( var_export( $arr, true ) ) . '</pre></div></td></tr>' . "\n";
-			}
-
-			echo '</tbody></table>';
+			new JsmScmComment();
 		}
 	}
 
-	JsmShowCommentMeta::get_instance();
+	JsmScm::get_instance();
 }
