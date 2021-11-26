@@ -31,9 +31,9 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 				return;
 			}
 
-			$view_cap = apply_filters( 'jsmscm_view_cap', 'manage_options' );
+			$capability = apply_filters( 'jsmscm_add_metabox_capability', 'manage_options', $comment_obj );
 
-			if ( ! current_user_can( $view_cap, $comment_obj->comment_ID ) ) {
+			if ( ! current_user_can( $capability, $comment_obj->comment_ID ) ) {
 
 				return;
 			}
