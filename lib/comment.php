@@ -22,6 +22,7 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 		public function __construct() {
 
 			add_action( 'add_meta_boxes_comment', array( $this, 'add_meta_boxes' ), 1000, 1 );
+			add_action( 'wp_ajax_delete_jsmscm_meta', array( $this, 'ajax_delete_meta' ) );
 		}
 
 		public function add_meta_boxes( $comment_obj ) {
@@ -31,9 +32,10 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 				return;
 			}
 
-			$capability = apply_filters( 'jsmscm_add_metabox_capability', 'manage_options', $comment_obj );
+			$show_meta_cap = apply_filters( 'jsmscm_show_metabox_capability', 'manage_options', $comment_obj );
+			$can_show_meta = current_user_can( $show_meta_cap, $comment_obj->ID );
 
-			if ( ! current_user_can( $capability, $comment_obj->comment_ID ) ) {
+			if ( ! $can_show_meta ) {
 
 				return;
 			}
@@ -62,13 +64,55 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 				return;
 			}
 
+			$cf           = JsmScmConfig::get_config();
 			$comment_meta = get_comment_meta( $comment_obj->comment_ID );
 			$skip_keys    = array();
 			$metabox_id   = 'jsmscm';
-			$key_title    = __( 'Key', 'jsm-show-comment-meta' );
-			$value_title  = __( 'Value', 'jsm-show-comment-meta' );
+			$admin_l10n   = $cf[ 'plugin' ][ 'jsmscm' ][ 'admin_l10n' ];
 
-			return SucomUtilMetabox::get_table_metadata( $comment_meta, $skip_keys, $comment_obj, $metabox_id, $key_title, $value_title );
+			$titles = array(
+				'key'   => __( 'Key', 'jsm-show-comment-meta' ),
+				'value' => __( 'Value', 'jsm-show-comment-meta' ),
+			);
+
+			return SucomUtilMetabox::get_table_metadata( $comment_meta, $skip_keys, $comment_obj, $comment_obj->comment_ID, $metabox_id, $admin_l10n, $titles );
+		}
+
+		public function ajax_delete_meta() {
+
+			$doing_ajax = SucomUtilWP::doing_ajax();
+
+			if ( ! $doing_ajax ) {	// Just in case.
+
+				return;
+			}
+
+			check_ajax_referer( JSMSCM_NONCE_NAME, '_ajax_nonce', $die = true );
+
+			if ( empty( $_POST[ 'obj_id' ] ) || empty( $_POST[ 'meta_key' ] ) ) {
+
+				die( -1 );
+			}
+	
+			$metabox_id   = 'jsmscm';
+			$obj_id       = sanitize_key( $_POST[ 'obj_id' ] );
+			$meta_key     = sanitize_key( $_POST[ 'meta_key' ] );
+			$comment_obj  = get_comment( $obj_id );
+			$del_meta_cap = apply_filters( 'jsmstm_delete_meta_capability', 'manage_options', $comment_obj );
+			$can_del_meta = current_user_can( $del_meta_cap, $obj_id );
+			$hide_row_id  = $metabox_id . '-' . $obj_id . '-' . $meta_key;
+
+			if ( ! $can_del_meta ) {
+
+				die( -1 );
+			}
+
+			if ( delete_comment_meta( $obj_id, $meta_key ) ) {
+
+				die( $hide_row_id );
+			}
+
+			die( false );	// Show delete failed message.
 		}
 	}
 }

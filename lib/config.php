@@ -17,7 +17,7 @@ if ( ! class_exists( 'JsmScmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'jsmscm' => array(			// Plugin acronym.
-					'version'     => '2.0.0',	// Plugin version.
+					'version'     => '3.0.0-dev.2',	// Plugin version.
 					'slug'        => 'jsm-show-comment-meta',
 					'base'        => 'jsm-show-comment-meta/jsm-show-comment-meta.php',
 					'text_domain' => 'jsm-show-comment-meta',
@@ -75,6 +75,7 @@ if ( ! class_exists( 'JsmScmConfig' ) ) {
 			require_once JSMSCM_PLUGINDIR . 'lib/com/util-metabox.php';
 			require_once JSMSCM_PLUGINDIR . 'lib/com/util-wp.php';
 			require_once JSMSCM_PLUGINDIR . 'lib/comment.php';
+			require_once JSMSCM_PLUGINDIR . 'lib/script.php';
 
 			add_filter( 'jsmscm_load_lib', array( __CLASS__, 'load_lib' ), 10, 3 );
 		}
