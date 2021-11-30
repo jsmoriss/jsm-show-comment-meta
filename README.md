@@ -14,7 +14,7 @@
 
 <h2>Description</h2>
 
-<p>The JSM's Show Comment Metadata plugin displays comment meta keys and their unserialized values in a metabox at the bottom of comment editing pages.</p>
+<p><strong>The JSM's Show Comment Metadata plugin displays comment meta keys and their unserialized values in a metabox at the bottom of comment editing pages.</strong></p>
 
 <p>The current user must have the <a href="https://wordpress.org/support/article/roles-and-capabilities/#manage_options">WordPress 'manage_options' capability</a> (allows access to administration options) to view the Comment Metadata metabox, and the 'manage_options' capability to delete individual meta keys.</p>
 

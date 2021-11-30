@@ -17,7 +17,7 @@ Show comment metadata in a metabox when editing comments - a great tool for debu
 
 == Description ==
 
-The JSM's Show Comment Metadata plugin displays comment meta keys and their unserialized values in a metabox at the bottom of comment editing pages.
+**The JSM's Show Comment Metadata plugin displays comment meta keys and their unserialized values in a metabox at the bottom of comment editing pages.**
 
 The current user must have the [WordPress 'manage_options' capability](https://wordpress.org/support/article/roles-and-capabilities/#manage_options) (allows access to administration options) to view the Comment Metadata metabox, and the 'manage_options' capability to delete individual meta keys.
 
