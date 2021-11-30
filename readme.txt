@@ -6,7 +6,7 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://jsmoriss.github.io/jsm-show-comment-meta/assets/
-Tags: meta, comment meta, inspector, custom fields, debug, tools
+Tags: meta, comment meta, delete, debug
 Contributors: jsmoriss
 Requires PHP: 7.2
 Requires At Least: 5.2
@@ -17,13 +17,7 @@ Show comment metadata in a metabox when editing comments - a great tool for debu
 
 == Description ==
 
-**Wondering about the comment meta your theme and/or plugins might be creating?**
-
-**Want to find the name of a specific comment meta key?**
-
-**Need some help debugging your comment meta (aka custom fields)?**
-
-The JSM's Show Comment Metadata plugin displays all comment meta (aka custom fields) keys and their unserialized values in a metabox at the bottom of comment editing pages.
+The JSM's Show Comment Metadata plugin displays comment meta keys and their unserialized values in a metabox at the bottom of comment editing pages. By default, the current user needs to have the 'manage_options' capability to view the Comment Metadata metabox, and the 'manage_options' capability to delete individual meta keys. The default 'manage_options' capability can be modified using the 'jsmscm_show_metabox_capability' and 'jsmscm_delete_meta_capability' filters.
 
 There are no plugin settings - simply *install* and *activate* the plugin.
 
@@ -82,7 +76,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.0-dev.2 (TBD)**
+**Version 3.0.0-b.1 (2021/11/30)**
 
 * **New Features**
 	* Added the ability to delete individual comment meta.
@@ -112,9 +106,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.0-dev.2 =
+= 3.0.0-b.1 =
 
-(TBD) Added the ability to delete individual comment meta.
+(2021/11/30) Added the ability to delete individual comment meta.
 
 = 2.0.0 =
 

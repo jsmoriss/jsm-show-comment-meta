@@ -9,18 +9,12 @@
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>5.8.2</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="https://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
-<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>meta, comment meta, inspector, custom fields, debug, tools</td></tr>
+<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>meta, comment meta, delete, debug</td></tr>
 </table>
 
 <h2>Description</h2>
 
-<p><strong>Wondering about the comment meta your theme and/or plugins might be creating?</strong></p>
-
-<p><strong>Want to find the name of a specific comment meta key?</strong></p>
-
-<p><strong>Need some help debugging your comment meta (aka custom fields)?</strong></p>
-
-<p>The JSM's Show Comment Metadata plugin displays all comment meta (aka custom fields) keys and their unserialized values in a metabox at the bottom of comment editing pages.</p>
+<p>The JSM's Show Comment Metadata plugin displays comment meta keys and their unserialized values in a metabox at the bottom of comment editing pages. By default, the current user needs to have the 'manage_options' capability to view the Comment Metadata metabox, and the 'manage_options' capability to delete individual meta keys. The default 'manage_options' capability can be modified using the 'jsmscm_show_metabox_capability' and 'jsmscm_delete_meta_capability' filters.</p>
 
 <p>There are no plugin settings - simply <em>install</em> and <em>activate</em> the plugin.</p>
 
