@@ -93,7 +93,7 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 
 				die( -1 );
 			}
-	
+
 			$metabox_id   = 'jsmscm';
 			$obj_id       = sanitize_key( $_POST[ 'obj_id' ] );
 			$meta_key     = sanitize_key( $_POST[ 'meta_key' ] );
