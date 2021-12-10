@@ -94,13 +94,17 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 				die( -1 );
 			}
 
+			/**
+			 * Note that the $table_row_id value must match the value used in SucomUtilMetabox::get_table_metadata(),
+			 * so that jQuery can hide the table row after a successful delete.
+			 */
 			$metabox_id   = 'jsmscm';
 			$obj_id       = sanitize_key( $_POST[ 'obj_id' ] );
 			$meta_key     = sanitize_key( $_POST[ 'meta_key' ] );
+			$table_row_id = sanitize_key( $metabox_id . '_' . $obj_id . '_' . $meta_key );
 			$comment_obj  = get_comment( $obj_id );
 			$del_meta_cap = apply_filters( 'jsmstm_delete_meta_capability', 'manage_options', $comment_obj );
 			$can_del_meta = current_user_can( $del_meta_cap, $obj_id );
-			$hide_row_id  = $metabox_id . '-' . $obj_id . '-' . $meta_key;
 
 			if ( ! $can_del_meta ) {
 
@@ -109,7 +113,7 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 
 			if ( delete_comment_meta( $obj_id, $meta_key ) ) {
 
-				die( $hide_row_id );
+				die( $table_row_id );
 			}
 
 			die( false );	// Show delete failed message.
