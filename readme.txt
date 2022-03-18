@@ -58,6 +58,20 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.0.3 (2022/03/18)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Updated the sucom class library files.
+* **Requires At Least**
+	* PHP v7.2.
+	* WordPress v5.2.
+
 **Version 3.0.2 (2021/12/10)**
 
 * **New Features**
@@ -100,21 +114,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* PHP v7.2.
 	* WordPress v5.2.
 
-**Version 2.0.0 (2021/11/26)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Complete rewrite of the plugin - all class, method, and filter names have changed.
-* **Requires At Least**
-	* PHP v7.2.
-	* WordPress v5.2.
-
 == Upgrade Notice ==
+
+= 3.0.3 =
+
+(2022/03/18) Updated the sucom class library files.
 
 = 3.0.2 =
 
@@ -127,8 +131,4 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 = 3.0.0 =
 
 (2021/11/30) Added the ability to delete individual comment meta.
-
-= 2.0.0 =
-
-(2021/11/26) Complete rewrite of the plugin - all class, method, and filter names have changed.
 
