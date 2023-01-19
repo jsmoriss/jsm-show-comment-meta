@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * Plugin Name: JSM's Show Comment Metadata
  * Text Domain: jsm-show-comment-meta
  * Domain Path: /languages
