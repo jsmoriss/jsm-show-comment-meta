@@ -10,7 +10,7 @@
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
  * Description: Show comment metadata in a metabox when editing comments - a great tool for debugging issues with comment metadata.
- * Requires PHP: 7.2
+ * Requires PHP: 7.2.5
  * Requires At Least: 5.5
  * Tested Up To: 6.2.0
  * Version: 3.0.12
