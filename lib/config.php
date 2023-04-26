@@ -17,7 +17,7 @@ if ( ! class_exists( 'JsmScmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'jsmscm' => array(			// Plugin acronym.
-					'version'     => '3.0.11',	// Plugin version.
+					'version'     => '3.0.12',	// Plugin version.
 					'slug'        => 'jsm-show-comment-meta',
 					'base'        => 'jsm-show-comment-meta/jsm-show-comment-meta.php',
 					'text_domain' => 'jsm-show-comment-meta',
