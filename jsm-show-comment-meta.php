@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: JSM's Show Comment Metadata
+ * Plugin Name: JSM Show Comment Metadata
  * Text Domain: jsm-show-comment-meta
  * Domain Path: /languages
  * Plugin URI: https://surniaulula.com/extend/plugins/jsm-show-comment-meta/
