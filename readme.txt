@@ -1,5 +1,5 @@
-=== JSM's Show Comment Metadata ===
-Plugin Name: JSM's Show Comment Metadata
+=== JSM Show Comment Metadata ===
+Plugin Name: JSM Show Comment Metadata
 Plugin Slug: jsm-show-comment-meta
 Text Domain: jsm-show-comment-meta
 Domain Path: /languages
@@ -17,7 +17,7 @@ Show comment metadata in a metabox when editing comments - a great tool for debu
 
 == Description ==
 
-**The JSM's Show Comment Metadata plugin displays comment meta keys and their unserialized values in a metabox at the bottom of comment editing pages.**
+**The JSM Show Comment Metadata plugin displays comment meta keys and their unserialized values in a metabox at the bottom of comment editing pages.**
 
 The current user must have the [WordPress *manage_options* capability](https://wordpress.org/support/article/roles-and-capabilities/#manage_options) (allows access to administration options) to view the Comment Metadata metabox, and the *manage_options* capability to delete individual meta keys.
 
@@ -27,10 +27,10 @@ There are no plugin settings - simply install and activate the plugin.
 
 = Related Plugins =
 
-* [JSM's Show Post Metadata](https://wordpress.org/plugins/jsm-show-post-meta/)
-* [JSM's Show Term Metadata](https://wordpress.org/plugins/jsm-show-term-meta/)
-* [JSM's Show User Metadata](https://wordpress.org/plugins/jsm-show-user-meta/)
-* [JSM's Show Registered Shortcodes](https://wordpress.org/plugins/jsm-show-registered-shortcodes/)
+* [JSM Show Post Metadata](https://wordpress.org/plugins/jsm-show-post-meta/)
+* [JSM Show Term Metadata](https://wordpress.org/plugins/jsm-show-term-meta/)
+* [JSM Show User Metadata](https://wordpress.org/plugins/jsm-show-user-meta/)
+* [JSM Show Registered Shortcodes](https://wordpress.org/plugins/jsm-show-registered-shortcodes/)
 
 == Installation ==
 
