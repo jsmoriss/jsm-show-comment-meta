@@ -65,7 +65,7 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 			}
 
 			$cf           = JsmScmConfig::get_config();
-			$comment_meta = get_comment_meta( $comment_obj->comment_ID );
+			$comment_meta = get_metadata( 'comment', $comment_obj->comment_ID );
 			$skip_keys    = array();
 			$metabox_id   = 'jsmscm';
 			$admin_l10n   = $cf[ 'plugin' ][ 'jsmscm' ][ 'admin_l10n' ];
@@ -111,7 +111,7 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 				die( -1 );
 			}
 
-			if ( delete_comment_meta( $obj_id, $meta_key ) ) {
+			if ( delete_metadata( 'comment', $obj_id, $meta_key ) ) {
 
 				die( $table_row_id );
 			}
