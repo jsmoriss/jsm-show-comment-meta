@@ -12,7 +12,7 @@
  * Description: Show comment metadata in a metabox when editing comments - a great tool for debugging issues with comment metadata.
  * Requires PHP: 7.2.34
  * Requires At Least: 5.5
- * Tested Up To: 6.3.0
+ * Tested Up To: 6.3.1
  * Version: 3.2.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
