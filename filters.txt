@@ -1,17 +1,9 @@
 
-Filter the comment meta shown in the metabox:
+'jsmscm_metabox_table_metadata' ( $metadata, $comment_obj )	// Filter the comment meta shown in the metabox.
 
-'jsmscm_metabox_table_metadata' ( $metadata, $comment_obj )
+'jsmscm_metabox_table_skip_keys' ( $skip_keys, $comment_obj )	// Array of regular expressions to exclude meta keys.
 
-An array of regular expressions to exclude meta keys:
+'jsmscm_show_metabox_capability' ( 'manage_options', $comment_obj )	// Capability required to show comment meta.
 
-'jsmscm_metabox_table_skip_keys' ( $skip_keys, $comment_obj )
-
-current_user_can() capability required to show comment meta:
-
-'jsmscm_show_metabox_capability' ( 'manage_options', $comment_obj )
-
-current_user_can() capability required to delete comment meta:
-
-'jsmscm_delete_meta_capability' ( 'manage_options', $comment_obj )
+'jsmscm_delete_meta_capability' ( 'manage_options', $comment_obj )	// Capability required to delete comment meta.
 
