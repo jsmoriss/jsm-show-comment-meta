@@ -27,13 +27,14 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 
 		public function add_meta_boxes( $comment_obj ) {
 
-			if ( ! isset( $comment_obj->comment_ID ) ) {	// Just in case.
+			if ( ! empty( $comment_obj->comment_ID ) ) {
 
-				return;
-			}
+				$comment_id = $comment_obj->comment_ID;
+
+			} else return;
 
 			$show_meta_cap = apply_filters( 'jsmscm_show_metabox_capability', 'manage_options', $comment_obj );
-			$can_show_meta = current_user_can( $show_meta_cap, $comment_obj->ID );
+			$can_show_meta = current_user_can( $show_meta_cap, $comment_id );
 
 			if ( ! $can_show_meta ) {
 
@@ -60,13 +61,14 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 
 		public function get_metabox( $comment_obj ) {
 
-			if ( empty( $comment_obj->comment_ID ) ) {
+			if ( ! empty( $comment_obj->comment_ID ) ) {
 
-				return;
-			}
+				$comment_id = $comment_obj->comment_ID;
+
+			} else return;
 
 			$cf           = JsmScmConfig::get_config();
-			$comment_meta = get_metadata( 'comment', $comment_obj->comment_ID );
+			$comment_meta = get_metadata( 'comment', $comment_id );
 			$skip_keys    = array();
 			$metabox_id   = 'jsmscm';
 			$admin_l10n   = $cf[ 'plugin' ][ 'jsmscm' ][ 'admin_l10n' ];
@@ -76,7 +78,7 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 				'value' => __( 'Value', 'jsm-show-comment-meta' ),
 			);
 
-			return SucomUtilMetabox::get_table_metadata( $comment_meta, $skip_keys, $comment_obj, $comment_obj->comment_ID, $metabox_id, $admin_l10n, $titles );
+			return SucomUtilMetabox::get_table_metadata( $comment_meta, $skip_keys, $comment_obj, $comment_id, $metabox_id, $admin_l10n, $titles );
 		}
 
 		public function ajax_delete_meta() {
