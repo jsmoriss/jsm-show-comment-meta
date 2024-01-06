@@ -9,7 +9,7 @@ Assets URI: https://jsmoriss.github.io/jsm-show-comment-meta/assets/
 Tags: meta, comment meta, delete, debug, inspector
 Contributors: jsmoriss
 Requires PHP: 7.2.34
-Requires At Least: 5.5
+Requires At Least: 5.8
 Tested Up To: 6.4.2
 Stable Tag: 3.10.0
 
