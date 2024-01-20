@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the JSM Show Comment Metadata package.
 msgid ""
 msgstr ""
-"Project-Id-Version: JSM Show Comment Metadata 3.11.0\n"
+"Project-Id-Version: JSM Show Comment Metadata 4.0.0-dev.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/jsm-show-comment-"
 "meta\n"
 "POT-Creation-Date: 2024-MO-DA HO:MI+ZONE\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Value"
 msgstr ""
 
-#: lib/script.php:62
+#: lib/script.php:64
 msgid "Unable to delete meta key '{1}' for comment ID {0}."
 msgstr ""
 

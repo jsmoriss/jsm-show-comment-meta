@@ -43,7 +43,9 @@ if ( ! class_exists( 'JsmScmScript' ) ) {
 
 			$admin_l10n = $cf[ 'plugin' ][ 'jsmscm' ][ 'admin_l10n' ];
 
-			// The version number should match the version in js/com/jquery-admin-page.js.
+			/*
+			 * The version number should match the version in js/com/jquery-admin-page.js.
+			 */
 			wp_register_script( 'sucom-admin-page', JSMSCM_URLPATH . 'js/com/jquery-admin-page.min.js',
 				$deps = array( 'jquery' ), '20230704', $in_footer = true );
 
