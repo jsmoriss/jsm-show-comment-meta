@@ -6,7 +6,7 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://jsmoriss.github.io/jsm-show-comment-meta/assets/
-Tags: meta, comment meta, delete, debug, inspector
+Tags: comments, meta, metadata, delete, debug, inspector
 Contributors: jsmoriss
 Requires PHP: 7.2.34
 Requires At Least: 5.8
@@ -17,16 +17,36 @@ Show comment metadata in a metabox when editing comments - a great tool for debu
 
 == Description ==
 
-**The JSM Show Comment Metadata plugin displays comment meta keys and their unserialized values in a metabox at the bottom of comment editing pages.**
-
-The current user must have the [WordPress *manage_options* capability](https://wordpress.org/support/article/roles-and-capabilities/#manage_options) (allows access to administration options) to view the Comment Metadata metabox, and the *manage_options* capability to delete individual meta keys.
-
-The default *manage_options* capability can be modified using the 'jsmscm_show_metabox_capability' and 'jsmscm_delete_meta_capability' filters (see filters.txt in the plugin folder).
+The JSM Show Comment Metadata plugin displays comment meta keys and their unserialized values in a metabox at the bottom of comment editing pages.
 
 There are no plugin settings - simply install and activate the plugin.
 
+= Available Filters =
+
+Filter the comment meta shown in the metabox:
+
+<pre><code>'jsmscm_metabox_table_metadata' ( array $metadata, $comment_obj )</code></pre>
+
+Array of regular expressions to exclude meta keys:
+
+<pre><code>'jsmscm_metabox_table_skip_keys' ( array $skip_keys, $comment_obj )</code></pre>
+
+Capability required to show comment meta:
+
+<pre><code>'jsmscm_show_metabox_capability' ( 'manage_options', $comment_obj )</code></pre>
+
+Capability required to delete comment meta:
+
+<pre><code>'jsmscm_delete_meta_capability' ( 'manage_options', $comment_obj )</code></pre>
+
+Icon for the delete comment meta button:
+
+<pre><code>'jsmscm_delete_meta_icon_class' ( 'dashicons dashicons-table-row-delete' )</code></pre>
+
 = Related Plugins =
 
+* [JSM Show Comment Metadata](https://wordpress.org/plugins/jsm-show-comment-meta/)
+* [JSM Show Order Metadata for WooCommerce](https://wordpress.org/plugins/jsm-show-order-meta/)
 * [JSM Show Post Metadata](https://wordpress.org/plugins/jsm-show-post-meta/)
 * [JSM Show Term Metadata](https://wordpress.org/plugins/jsm-show-term-meta/)
 * [JSM Show User Metadata](https://wordpress.org/plugins/jsm-show-user-meta/)
@@ -58,6 +78,20 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.0.0-dev.1 (TBD)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v7.2.34.
+	* WordPress v5.8.
+
 **Version 3.11.0 (2024/01/12)**
 
 * **New Features**
@@ -73,6 +107,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v5.8.
 
 == Upgrade Notice ==
+
+= 4.0.0-dev.1 =
+
+(TBD) None.
 
 = 3.11.0 =
 
