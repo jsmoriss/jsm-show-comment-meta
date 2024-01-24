@@ -21,7 +21,7 @@ The JSM Show Comment Metadata plugin displays comment meta keys and their unseri
 
 There are no plugin settings - simply install and activate the plugin.
 
-= Available Filters =
+= Available Filters for Developers =
 
 Filter the comment meta shown in the metabox:
 
