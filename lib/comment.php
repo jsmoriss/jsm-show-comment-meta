@@ -67,18 +67,18 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 
 			} else return;
 
-			$cf         = JsmScmConfig::get_config();
-			$metadata   = get_metadata( 'comment', $comment_id );
-			$skip_keys  = array();
-			$metabox_id = 'jsmscm';
-			$admin_l10n = $cf[ 'plugin' ][ 'jsmscm' ][ 'admin_l10n' ];
+			$cf           = JsmScmConfig::get_config();
+			$metadata     = get_metadata( 'comment', $comment_id );
+			$exclude_keys = array();
+			$metabox_id   = 'jsmscm';
+			$admin_l10n   = $cf[ 'plugin' ][ 'jsmscm' ][ 'admin_l10n' ];
 
 			$titles = array(
 				'key'   => __( 'Key', 'jsm-show-comment-meta' ),
 				'value' => __( 'Value', 'jsm-show-comment-meta' ),
 			);
 
-			return SucomUtilMetabox::get_table_metadata( $metadata, $skip_keys, $obj, $comment_id, $metabox_id, $admin_l10n, $titles );
+			return SucomUtilMetabox::get_table_metadata( $metadata, $exclude_keys, $obj, $comment_id, $metabox_id, $admin_l10n, $titles );
 		}
 
 		public function ajax_delete_meta() {
