@@ -29,7 +29,7 @@ Filter the comment meta shown in the metabox:
 
 Array of regular expressions to exclude meta keys:
 
-<pre><code>'jsmscm_metabox_table_skip_keys' ( array $skip_keys, $comment_obj )</code></pre>
+<pre><code>'jsmscm_metabox_table_exclude_keys' ( array $exclude_keys, $comment_obj )</code></pre>
 
 Capability required to show comment meta:
 
