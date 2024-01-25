@@ -85,17 +85,11 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 
 			$doing_ajax = SucomUtilWP::doing_ajax();
 
-			if ( ! $doing_ajax ) {	// Just in case.
-
-				return;
-			}
+			if ( ! $doing_ajax ) return;
 
 			check_ajax_referer( JSMSCM_NONCE_NAME, '_ajax_nonce', $die = true );
 
-			if ( empty( $_POST[ 'obj_id' ] ) || empty( $_POST[ 'meta_key' ] ) ) {
-
-				die( -1 );
-			}
+			if ( empty( $_POST[ 'obj_id' ] ) || empty( $_POST[ 'meta_key' ] ) ) die( -1 );
 
 			$metabox_id   = 'jsmscm';
 			$obj_id       = SucomUtil::sanitize_int( $_POST[ 'obj_id' ] );
@@ -105,14 +99,9 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 			$delete_cap   = apply_filters( 'jsmstm_delete_meta_capability', 'manage_options', $comment_obj );
 			$can_delete   = current_user_can( $delete_cap, $obj_id, $comment_obj );
 
-			if ( ! $can_delete ) {
+			if ( ! $can_delete ) die( -1 );
 
-				die( -1 );
-
-			} elseif ( delete_metadata( 'comment', $obj_id, $meta_key ) ) {
-
-				die( $table_row_id );
-			}
+			if ( delete_metadata( 'comment', $obj_id, $meta_key ) ) die( $table_row_id );
 
 			die( false );	// Show delete failed message.
 		}
