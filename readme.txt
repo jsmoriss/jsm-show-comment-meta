@@ -6,7 +6,7 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://jsmoriss.github.io/jsm-show-comment-meta/assets/
-Tags: comments, meta, metadata, delete, debug, inspector
+Tags: comments, custom fields, metadata, debug, inspector
 Contributors: jsmoriss
 Requires PHP: 7.2.34
 Requires At Least: 5.8
