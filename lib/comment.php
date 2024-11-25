@@ -92,7 +92,7 @@ if ( ! class_exists( 'JsmScmComment' ) ) {
 			if ( empty( $_POST[ 'obj_id' ] ) || empty( $_POST[ 'meta_key' ] ) ) die( -1 );
 
 			$metabox_id   = 'jsmscm';
-			$obj_id       = SucomUtil::sanitize_int( $_POST[ 'obj_id' ] );
+			$obj_id       = SucomUtil::sanitize_int( $_POST[ 'obj_id' ] );	// Returns integer or null.
 			$meta_key     = SucomUtil::sanitize_meta_key( $_POST[ 'meta_key' ] );
 			$table_row_id = SucomUtil::sanitize_key( $metabox_id . '_' . $obj_id . '_' . $meta_key );
 			$comment_obj  = get_comment( $obj_id );
