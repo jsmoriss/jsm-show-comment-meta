@@ -3,8 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: JSM Show Comment Metadata 4.9.1\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/jsm-show-comment-"
-"meta\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/jsm-show-comment-meta\n"
 "POT-Creation-Date: 2026-MO-DA HO:MI+ZONE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,7 +27,6 @@ msgstr ""
 #: lib/script.php:64
 msgid "Unable to delete meta key '{1}' for comment ID {0}."
 msgstr ""
-
 #. Plugin Name of the plugin/theme
 msgid "JSM Show Comment Metadata"
 msgstr ""
@@ -38,9 +36,7 @@ msgid "https://surniaulula.com/extend/plugins/jsm-show-comment-meta/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid ""
-"Show comment metadata in a metabox when editing comments - a great tool for "
-"debugging issues with comment metadata."
+msgid "Show comment metadata in a metabox when editing comments - a great tool for debugging issues with comment metadata."
 msgstr ""
 
 #. Author of the plugin/theme
